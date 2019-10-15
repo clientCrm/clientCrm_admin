@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AdminLTE 3 | Dashboard</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="base/plugins/fontawesome-free/css/all.min.css" >
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bbootstrap 4 -->
+  <link rel="stylesheet" href="base/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="base/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="base/plugins/jqvmap/jqvmap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="base/dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="base/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="base/plugins/daterangepicker/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="base/plugins/summernote/summernote-bs4.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+  <!-- import CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <style>
+    .el-header{
+      padding: 0 20px;
+      box-sizing: border-box;
+      flex-shrink: 0;
+      border-bottom:  1px solid  #1d2124;
+    }
+  </style>
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+
+<div id="app">
+  <div id="body">
+    <el-container>
+      <el-header ><div th:replace ="~{common/navbar::navBar}"></div></el-header>
+      <el-container>
+        <el-aside width="200px"><div th:insert="~{common/aside::asideBar}" ></div></el-aside>
+        <el-container>
+          <el-main>Main</el-main>
+          <el-footer>
+            <div th:insert="~{common/footer::foot}"></div>
+          </el-footer>
+        </el-container>
+      </el-container>
+    </el-container>
+  </div>
+</div>
+
+
+<!--vue-element--><!-- import Vue before Element --><script src="https://unpkg.com/vue/dist/vue.js"></script><!-- import JavaScript --><script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script src="base/plugins/jquery/jquery.min.js"></script>
+
+<!--引入自定义的Js-->
+<script>
+    new Vue({
+        el:'#app',
+        data:function(){
+            return{
+
+            }
+        },
+        methods:{
+
+        }
+    })
+</script>
+</body>
+</html>
